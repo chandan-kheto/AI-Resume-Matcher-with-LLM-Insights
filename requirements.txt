@@ -1,0 +1,21 @@
+
+streamlit
+torch
+sentence-transformers
+pandas
+numpy
+PyPDF2
+python-docx
+reportlab
+huggingface-hub
+fastapi
+uvicorn
+python-multipart
+gtts
+SpeechRecognition
+pyttsx3
+requests
+
+# python backend/prepare_embeddings.py
+# uvicorn main:app --reload
+# npm run dev 
