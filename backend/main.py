@@ -1,13 +1,14 @@
 
 # backend/api.py
-import sys, os
-sys.path.append(os.path.abspath("."))
-
 from fastapi import FastAPI, UploadFile, File
+from fastapi.middleware.cors import CORSMiddleware
 import shutil
 
-from matcher import match_resume_with_jobs, extract_text_from_resume, generate_llm_insights
-from fastapi.middleware.cors import CORSMiddleware
+from backend.matcher import (
+    match_resume_with_jobs,
+    extract_text_from_resume,
+    generate_llm_insights
+)
 
 app = FastAPI(title="AI Resume Matcher API")
 
