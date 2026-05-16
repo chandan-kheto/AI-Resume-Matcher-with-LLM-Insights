@@ -37,8 +37,6 @@ async def match_resume(file: UploadFile = File(...)):
 
     results = match_resume_with_jobs(temp_path, top_k=5)
 
-    os.remove(temp_path)
-
     return {"matches": results}
 
 
@@ -54,7 +52,5 @@ async def generate_insights(file: UploadFile = File(...)):
     resume_text = extract_text_from_resume(temp_path)
 
     insight = generate_llm_insights(resume_text, results[0]["Job Description"])
-
-    os.remove(temp_path)
 
     return {"insight": insight}
